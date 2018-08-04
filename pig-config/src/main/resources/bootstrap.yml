@@ -10,7 +10,7 @@ spring:
     config:
       server:
         git:
-          uri: https://gitee.com/cqzqxq_lxh/pig-config.git
+          uri: git@47.106.153.63:jmrh/pig-config.git
           default-label: ${spring.profiles.active}   #解决监控down
 
 # 关闭安全管理
