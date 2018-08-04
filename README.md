@@ -119,3 +119,8 @@ pig
         <td><img src="https://oss.pig4cloud.com/pic/201806/17.png"/></td>
     </tr>
 </table>
+
+## 编译
+- eclipse编译环境请把https://projectlombok.org/downloads/lombok.jar 放到eclipse启动文件的同级目录
+- 修改eclipse.ini 在最后添加 -Xbootclasspath/a:lombok.jar -javaagent:lombok.jar 
+- 重启eclipse
