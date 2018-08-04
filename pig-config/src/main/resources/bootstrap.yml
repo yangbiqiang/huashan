@@ -5,12 +5,12 @@ spring:
   application:
     name: pig-config-server
   profiles:
-    active: develop
+    active: dev
   cloud:
     config:
       server:
         git:
-          uri: git@47.106.153.63:jmrh/pig-config.git
+          uri: http://47.106.153.63/jmrh/pig-config.git
           default-label: ${spring.profiles.active}   #解决监控down
 
 # 关闭安全管理
@@ -24,10 +24,10 @@ endpoints:
 spring:
   profiles: dev
   rabbitmq:
-    host: 139.224.200.249
-    port: 5682
-    username: pig
-    password: lengleng
+    host: 127.0.0.1
+    port: 5672
+    username: dev
+    password: QMCiFaKJ
 eureka:
   instance:
     prefer-ip-address: true
@@ -42,9 +42,9 @@ spring:
   profiles: prd
   rabbitmq:
     host: 127.0.0.1
-    port: 5682
-    username: pig
-    password: lengleng
+    port: 5672
+    username: dev
+    password: QMCiFaKJ
   cloud:
     config:
       retry:
@@ -57,4 +57,4 @@ eureka:
     prefer-ip-address: true
   client:
     serviceUrl:
-      defaultZone: http://pig:gip6666@eureka:1025/eureka
+      defaultZone: http://pig:gip6666@localhost:1025/eureka
