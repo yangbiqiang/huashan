@@ -124,3 +124,8 @@ pig
 - eclipse编译环境请把https://projectlombok.org/downloads/lombok.jar 放到eclipse启动文件的同级目录
 - 修改eclipse.ini 在最后添加 -Xbootclasspath/a:lombok.jar -javaagent:lombok.jar 
 - 重启eclipse
+## 数据库和缓存配置
+- mysql新建用户dev 密码设置为QMCiFaKJ
+- 导入pig/doc/pig.sql创建数据库
+- rabbitmq 新建用户dev 密码设置为QMCiFaKJ
+- rabbitmqctl set_permissions -p "/" dev ".*" ".*" ".*" 分配权限
